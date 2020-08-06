@@ -65,20 +65,6 @@ const App = () => {
     ];
 
     window.addEventListener("click", goFaster);
-    var checkThis = function () {
-      redQueen_alice_sprite.current.animate(
-        [
-          { transform: 'translate(-50%, -50%) scale(.5)' },
-          { transform: 'translate(-50%, -50%) scale(2)' }   
-        ], { 
-          duration: 8000, 
-          easing: 'ease-in-out', 
-          fill: 'both'
-        }
-      )
-    }
-    var bottle = document.getElementById('bottle')
-    bottle.addEventListener("click", checkThis)
     var adjustBackgroundPlayback = () => {
       if (redQueen_alice.playbackRate < 0.8) {
         sceneries.forEach(function (anim) {
