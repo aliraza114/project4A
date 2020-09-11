@@ -26,7 +26,6 @@ const App = () => {
       { transform: "translateY(0)" },
       { transform: "translateY(-100%)" },
     ];
-   
     var background1Movement = background1.current.animate(
       sceneryFrames,
       sceneryTimingBackground
@@ -64,7 +63,6 @@ const App = () => {
       background2Movement,
     ];
 
-    window.addEventListener("click", goFaster);
     var adjustBackgroundPlayback = () => {
       if (redQueen_alice.playbackRate < 0.8) {
         sceneries.forEach(function (anim) {
@@ -93,17 +91,12 @@ const App = () => {
       redQueen_alice.playbackRate *= 1.1;
       adjustBackgroundPlayback();
     };
-   
+    window.addEventListener("click", goFaster);
   });
   return (
     <div className="wrapper">
       <div className="sky"></div>
       <div className="earth">
-      <div id="bottle" className="positionRight">
-        <div id="liquid"> </div>
-        <img class="fg" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/drink-me_fg_small.png" 
-        srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/drink-me_fg.png 2x"></img>
-      </div>
         <div id="red-queen_and_alice">
           <img
             id="red-queen_and_alice_sprite"
